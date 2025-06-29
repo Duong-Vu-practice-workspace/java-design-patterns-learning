@@ -1,39 +1,49 @@
 package vn.edu.ptit.duongvct.builder;
 
 import java.time.LocalDate;
+import java.time.Period;
 
 //The concrete builder for UserWebDTO
-//TODO implement builder
 public class UserWebDTOBuilder implements UserDTOBuilder{
-
+    private String firstName;
+    private String lastName;
+    private String age;
+    private String address;
+    private UserWebDTO dto;
 
     @Override
     public UserDTOBuilder withFirstName(String fname) {
-        return null;
+        this.firstName = fname;
+        return this;
     }
 
     @Override
     public UserDTOBuilder withLastName(String lname) {
-        return null;
+        this.lastName = lname;
+        return this;
     }
 
     @Override
     public UserDTOBuilder withBirthday(LocalDate date) {
-        return null;
+        Period ageInYears = Period.between(date, LocalDate.now());
+        this.age = Integer.toString(ageInYears.getYears());
+        return this;
     }
 
     @Override
     public UserDTOBuilder withAddress(Address address) {
-        return null;
+        this.address = String.format("%s, %s, %s, %s, %s", address.getHouseNumber(), address.getStreet(), address.getCity(), address.getState(), address.getZipcode());
+        return this;
     }
 
     @Override
     public UserDTO build() {
-        return null;
+        String name = String.format("%s %s", firstName, lastName);
+        return new UserWebDTO(name, address, age);
     }
 
     @Override
     public UserDTO getUserDTO() {
-        return null;
+        return dto;
     }
 }
