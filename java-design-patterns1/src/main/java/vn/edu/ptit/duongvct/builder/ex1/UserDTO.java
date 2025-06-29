@@ -1,4 +1,4 @@
-package vn.edu.ptit.duongvct.builder;
+package vn.edu.ptit.duongvct.builder.ex1;
 
 //Interface implemented by "products"
 public interface UserDTO {

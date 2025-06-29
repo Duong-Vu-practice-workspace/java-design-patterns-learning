@@ -1,4 +1,4 @@
-package vn.edu.ptit.duongvct.builder;
+package vn.edu.ptit.duongvct.builder.ex1;
 
 //A product in builder pattern
 public class UserWebDTO implements UserDTO {

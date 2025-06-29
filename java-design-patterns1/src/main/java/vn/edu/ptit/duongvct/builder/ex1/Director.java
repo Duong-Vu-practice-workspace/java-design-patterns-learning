@@ -1,4 +1,4 @@
-package vn.edu.ptit.duongvct.builder;
+package vn.edu.ptit.duongvct.builder.ex1;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
