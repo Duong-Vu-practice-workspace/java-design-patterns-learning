@@ -1,7 +1,8 @@
 package vn.edu.ptit.duongvct.factorymethod;
 
-import com.coffeepoweredcrew.factorymethod.message.Message;
-import com.coffeepoweredcrew.factorymethod.message.TextMessage;
+
+import vn.edu.ptit.duongvct.factorymethod.message.Message;
+import vn.edu.ptit.duongvct.factorymethod.message.TextMessage;
 
 /**
  * Provides implementation for creating Text messages
@@ -9,5 +10,8 @@ import com.coffeepoweredcrew.factorymethod.message.TextMessage;
 public class TextMessageCreator extends MessageCreator {
 
 
-
+    @Override
+    public Message createMessage() {
+        return new TextMessage();
+    }
 }
